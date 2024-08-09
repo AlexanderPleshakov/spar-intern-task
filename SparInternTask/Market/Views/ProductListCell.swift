@@ -84,7 +84,7 @@ struct ProductListCell: View {
     ProductListCell(
         viewModel: MarketCellViewModel(
             product: Product(
-                id: UUID(),
+                id: "1",
                 title: "Дорадо Охлажденная Непотрошеная 300-400г",
                 image: "p1",
                 rating: "4.1",

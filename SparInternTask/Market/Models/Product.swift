@@ -8,7 +8,7 @@
 import Foundation
 
 struct Product: Identifiable {
-    let id: UUID
+    let id: String
     let title: String
     let image: String
     let rating: String

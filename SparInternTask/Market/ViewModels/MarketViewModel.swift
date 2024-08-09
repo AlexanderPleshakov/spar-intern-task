@@ -12,7 +12,7 @@ enum MarketLayoutState {
 }
 
 final class MarketViewModel: ObservableObject {
-    @Published var layoutState: MarketLayoutState = .list
+    @Published var layoutState: MarketLayoutState = .grid
     @Published var products = Mocks.products
     
     func changeState() {

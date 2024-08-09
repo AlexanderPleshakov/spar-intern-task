@@ -10,7 +10,7 @@ import Foundation
 enum Mocks {
     static let products: [Product] = [
         Product(
-            id: UUID(),
+            id: "1",
             title: "Дорадо Охлажденная Непотрошеная 300-400г",
             image: "p1",
             rating: "4.1",
@@ -22,7 +22,7 @@ enum Mocks {
             country: "Франция 🇫🇷"
         ),
         Product(
-            id: UUID(),
+            id: "2",
             title: "сыр Ламбер 500/0 230г",
             image: "p2",
             rating: "4.9",
@@ -34,7 +34,7 @@ enum Mocks {
             country: nil
         ),
         Product(
-            id: UUID(),
+            id: "3",
             title: "Салат Овощной с Крабовыми Палочками",
             image: "p3",
             rating: "4.8",
@@ -46,7 +46,7 @@ enum Mocks {
             country: nil
         ),
         Product(
-            id: UUID(),
+            id: "4",
             title: "Ролл Маленькая Япония 216г",
             image: "p4",
             rating: "4.2",
@@ -58,7 +58,7 @@ enum Mocks {
             country: "Германия 🇩🇪"
         ),
         Product(
-            id: UUID(),
+            id: "5",
             title: "Дорадо Охлажденная Непотрошеная 300-400г",
             image: "p5",
             rating: "4.1",
@@ -70,7 +70,7 @@ enum Mocks {
             country: nil
         ),
         Product(
-            id: UUID(),
+            id: "6",
             title: "сыр Ламбер 500/0 230г",
             image: "p6",
             rating: "4.9",
@@ -82,7 +82,7 @@ enum Mocks {
             country: nil
         ),
         Product(
-            id: UUID(),
+            id: "7",
             title: "Салат Овощной с Крабовыми Палочками",
             image: "p7",
             rating: "4.8",
@@ -94,7 +94,7 @@ enum Mocks {
             country: "Германия 🇩🇪"
         ),
         Product(
-            id: UUID(),
+            id: "8",
             title: "Ролл Маленькая Япония 216г",
             image: "p8",
             rating: "4.2",

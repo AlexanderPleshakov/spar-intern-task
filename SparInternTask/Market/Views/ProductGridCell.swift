@@ -19,21 +19,92 @@ struct ProductGridCell: View {
                     ActionPanel(onListTap: {}, onFavouriteTap: {})
                 }
                 .overlay(alignment: .bottomLeading) {
-                    Rating(rating: "5.0")
+                    RatingView(rating: "5.0")
                 }
                 .overlay(alignment: .bottomTrailing) {
-                    Text("25%")
-                        .padding(.horizontal, 5)
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundStyle(Colors.darkRed)
+                    DiscountView(text: "25%")
                 }
+            
+            ProductNameView(name: viewModel.product.title)
+                .padding(.all, 8)
+            
+            Spacer()
+            
+            PriceAndBuyView(discountPrice: "367.90", price: "199,0") {
+                
+            }
         }
+        .frame(width: 168, height: 278)
+        .background(.white)
         .roundedCorners(16, 20, 20, 16)
         .shadow(color: Colors.shadowDark, radius: 8)
     }
 }
 
-fileprivate struct Rating: View {
+struct PriceAndBuyView: View {
+    let discountPrice: String
+    let price: String
+    let action: () -> Void
+    
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: 0) {
+                HStack(alignment: .top, spacing: 2) {
+                    Text("1298")
+                        .font(.system(size: 20, weight: .bold))
+                    Text("90")
+                        .font(.system(size: 16, weight: .bold))
+                    Image(uiImage: Images.perAmount)
+                        .padding(.vertical, 1)
+                }
+                Text("190,0")
+                    .font(.system(size: 12))
+                    .foregroundStyle(Colors.textIconsBlack03)
+                    .strikethrough(true, color: Colors.textIconsBlack03)
+            }
+            Spacer()
+            
+            Button {
+                action()
+            } label: {
+                Image(uiImage: Images.addCart)
+            }
+            .frame(width: 48, height: 36)
+            .background(Colors.green)
+            .clipShape(
+                RoundedRectangle(
+                    cornerRadius: 40,
+                    style: .continuous
+                )
+            )
+        }
+        .padding(.all, 4)
+    }
+}
+
+struct ProductNameView: View {
+    let name: String
+    
+    var body: some View {
+        Text(name)
+            .font(.system(size: 12))
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .multilineTextAlignment(.leading)
+            .foregroundStyle(Colors.textIconsBlack02)
+    }
+}
+
+struct DiscountView: View {
+    let text: String
+    var body: some View {
+        Text(text)
+            .padding(.horizontal, 5)
+            .font(.system(size: 16, weight: .bold))
+            .foregroundStyle(Colors.darkRed)
+    }
+}
+
+fileprivate struct RatingView: View {
     let rating: String
     
     var body: some View {
@@ -111,7 +182,7 @@ fileprivate struct Badge: View {
         viewModel: MarketCellViewModel(
             product: Product(
                 id: UUID(),
-                title: "Сыр Ламбер 500/0 230г",
+                title: "Дорадо Охлажденная Непотрошеная 300-400г",
                 rating: "4.1",
                 price: "199.0",
                 discountPrice: "99.90",

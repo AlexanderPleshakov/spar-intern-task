@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct MarketScreen: View {
-    private let columns = [
+    private let gridColumns = [
             GridItem(.flexible(), spacing: 5),
             GridItem(.flexible())
     ]
-    
     
     @ObservedObject var viewModel: MarketViewModel
     
@@ -27,7 +26,7 @@ struct MarketScreen: View {
                 switch viewModel.layoutState {
                 case .grid:
                     ScrollView {
-                        LazyVGrid(columns: columns, spacing: 8) {
+                        LazyVGrid(columns: gridColumns, spacing: 8) {
                             ForEach(viewModel.products) {
                                 ProductGridCell(
                                     viewModel: MarketCellViewModel(
@@ -41,7 +40,18 @@ struct MarketScreen: View {
                         .padding(.bottom, 30)
                     }
                 case .list:
-                    List {}
+                    ScrollView {
+                        LazyVGrid(columns: [GridItem(.flexible())], spacing: 8) {
+                            ForEach(viewModel.products) {
+                                ProductListCell(
+                                    viewModel: MarketCellViewModel(
+                                        product: $0
+                                    )
+                                )
+                            }
+                        }
+                        .padding(.bottom, 30)
+                    }
                 }
                 
                 Spacer()

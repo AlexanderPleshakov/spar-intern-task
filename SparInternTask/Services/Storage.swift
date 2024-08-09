@@ -8,18 +8,20 @@
 import Foundation
 
 final class Storage {
-    func add(id: String) {
-        UserDefaults.standard.setValue(true, forKey: id)
+    func add(id: String, multiply: Int, unit: String) {
+        UserDefaults.standard.setValue([multiply, unit], forKey: id)
     }
     
     func delete(id: String) {
         UserDefaults.standard.removeObject(forKey: id)
     }
     
-    func inCart(id: String) -> Bool {
-        if let _ = UserDefaults.standard.object(forKey: id) {
-            return true
+    func fetchProduct(id: String) -> (Int, String)? {
+        if let data = UserDefaults.standard.object(forKey: id) as? [Any],
+           let multiply = data[0] as? Int,
+           let unit = data[1] as? String {
+            return (multiply, unit)
         }
-        return false
+        return nil
     }
 }

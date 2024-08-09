@@ -9,6 +9,7 @@ import SwiftUI
 
 final class MarketCellViewModel: ObservableObject {
     let product: Product
+    let storage: Storage
     lazy var unitPickerViewModel = UnitPickerViewModel(onUpdate: updateCounts)
     
     @Published var priceAndBuyViewModel: PriceAndBuyViewModel
@@ -17,10 +18,19 @@ final class MarketCellViewModel: ObservableObject {
     @Published var totalPrice: String = ""
     
     private var multiply = 1
+    private var unit: String = "Кг"
     
     init(product: Product) {
         self.product = product
-        self.bought = false
+        self.storage = Storage()
+        if let (multiply, unit) = storage.fetchProduct(id: product.id) {
+            self.bought = true
+            self.multiply = multiply
+            self.unit = unit
+        } else {
+            self.bought = false
+        }
+        
         self.priceAndBuyViewModel = PriceAndBuyViewModel(
             discountPrice: product.discountPrice,
             price: product.price
@@ -28,9 +38,18 @@ final class MarketCellViewModel: ObservableObject {
         priceAndBuyViewModel.action = { [weak self] in
             guard let self else { return }
             self.bought = true
+            
+            updateCounts()
+            storage.add(
+                id: product.id,
+                multiply: multiply,
+                unit: unit
+            )
         }
         
+        unitPickerViewModel.select(unit: unit)
         updateTotalPrice()
+        updateUnits()
     }
     
     func addCount() {
@@ -45,6 +64,9 @@ final class MarketCellViewModel: ObservableObject {
                 bought = false
             }
             multiply = 1
+            updateCounts()
+            storage.delete(id: product.id)
+            return
         }
         updateCounts()
     }
@@ -52,13 +74,21 @@ final class MarketCellViewModel: ObservableObject {
     private func updateCounts() {
         updateUnits()
         updateTotalPrice()
+        
+        storage.add(
+            id: product.id,
+            multiply: multiply,
+            unit: unit
+        )
     }
     
     private func updateUnits() {
         switch unitPickerViewModel.selectedUnit {
         case "Кг":
+            unit = "Кг"
             unitsCount = "\(String(format: "%.1f", Double(multiply) / 10.0)) кг"
         case "Шт":
+            unit = "Шт"
             unitsCount = "\(multiply) шт"
         default:
             break

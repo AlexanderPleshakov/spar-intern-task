@@ -13,12 +13,12 @@ enum MarketLayoutState {
 
 final class MarketViewModel: ObservableObject {
     @Published var layoutState: MarketLayoutState = .grid
+    @Published var products = Mocks.products
     
     func changeState() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
             guard let self else { return }
             layoutState = layoutState == .grid ? .list : .grid
         }
-        
     }
 }

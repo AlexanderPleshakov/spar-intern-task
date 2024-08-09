@@ -23,30 +23,27 @@ struct MarketScreen: View {
     
     var body: some View {
         NavigationView {
-            Group {
+            VStack {
                 switch viewModel.layoutState {
                 case .grid:
-                    LazyVGrid(columns: columns, spacing: 8) {
-                        ProductGridCell(
-                            viewModel: MarketCellViewModel(
-                                product: Product(
-                                    id: UUID(),
-                                    title: "Дорадо Охлажденная Непотрошеная 300-400г",
-                                    image: "p3",
-                                    rating: "4.1",
-                                    price: "199.0",
-                                    discountPrice: "99.90",
-                                    discount: "12 %",
-                                    byWeight: false,
-                                    badge: BadgeType.new,
-                                    country: "Франция 🇫🇷"
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 8) {
+                            ForEach(viewModel.products) {
+                                ProductGridCell(
+                                    viewModel: MarketCellViewModel(
+                                        product: $0
+                                    )
                                 )
-                            )
-                        )
+                            }
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.top, 9)
                     }
                 case .list:
                     List {}
                 }
+                
+                Spacer()
             }
             .toolbar {
                 ToolbarItem(placement: .principal) {

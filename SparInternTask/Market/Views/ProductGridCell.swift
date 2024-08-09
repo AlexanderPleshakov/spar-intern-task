@@ -13,17 +13,11 @@ struct ProductGridCell: View {
     var body: some View {
         VStack {
             Image(viewModel.product.image, bundle: nil)
-                .overlay(alignment: .topLeading) {
-                    Badge(badge: viewModel.product.badge)
-                }
-                .overlay(alignment: .topTrailing) {
-                    ActionPanel(onListTap: {}, onFavouriteTap: {})
-                }
                 .overlay(alignment: .bottomLeading) {
-                    RatingView(rating: "5.0")
+                    RatingView(rating: viewModel.product.rating)
                 }
                 .overlay(alignment: .bottomTrailing) {
-                    DiscountView(text: "25%")
+                    DiscountView(text: viewModel.product.discount ?? "")
                 }
             
             VStack(alignment: .leading, spacing: 4) {
@@ -47,10 +41,17 @@ struct ProductGridCell: View {
                 PriceAndBuyView(viewModel: viewModel.priceAndBuyViewModel)
             }
         }
-        .frame(width: 168, height: 300)
+        .frame(height: 300)
+        .overlay(alignment: .topLeading) {
+            Badge(badge: viewModel.product.badge)
+        }
+        .overlay(alignment: .topTrailing) {
+            ActionPanel(onListTap: {}, onFavouriteTap: {})
+        }
         .background(.white)
         .roundedCorners(16, 20, 20, 16)
         .shadow(color: Colors.shadowDark, radius: 8)
+        
     }
 }
 

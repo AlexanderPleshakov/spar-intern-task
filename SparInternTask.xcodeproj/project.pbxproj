@@ -33,6 +33,7 @@
 		1683B0682C667FB40083C850 /* UnitPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0672C667FB40083C850 /* UnitPickerViewModel.swift */; };
 		1683B06A2C6687740083C850 /* PriceAndBuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0692C6687740083C850 /* PriceAndBuyViewModel.swift */; };
 		1683B06C2C669BF80083C850 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B06B2C669BF80083C850 /* CounterView.swift */; };
+		1683B06E2C66A5160083C850 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B06D2C66A5160083C850 /* Mocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		1683B0672C667FB40083C850 /* UnitPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitPickerViewModel.swift; sourceTree = "<group>"; };
 		1683B0692C6687740083C850 /* PriceAndBuyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAndBuyViewModel.swift; sourceTree = "<group>"; };
 		1683B06B2C669BF80083C850 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		1683B06D2C66A5160083C850 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				1683B02C2C65112A0083C850 /* Assets.xcassets */,
 				1683B0392C66258D0083C850 /* Images.swift */,
 				1683B0502C66476A0083C850 /* Colors.swift */,
+				1683B06D2C66A5160083C850 /* Mocks.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				1683B0652C667EBB0083C850 /* UnitPicker.swift in Sources */,
 				1683B03A2C66258D0083C850 /* Images.swift in Sources */,
 				1683B0632C666FDA0083C850 /* CountryView.swift in Sources */,
+				1683B06E2C66A5160083C850 /* Mocks.swift in Sources */,
 				1683B0292C6511280083C850 /* SparInternTaskApp.swift in Sources */,
 				1683B0472C6639050083C850 /* BadgeType.swift in Sources */,
 				1683B0592C666DF40083C850 /* ProductNameView.swift in Sources */,

@@ -22,6 +22,12 @@
 		1683B04F2C66415F0083C850 /* WeightOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B04E2C66415F0083C850 /* WeightOperator.swift */; };
 		1683B0512C66476A0083C850 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0502C66476A0083C850 /* Colors.swift */; };
 		1683B0542C664ED10083C850 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0532C664ED10083C850 /* RoundedCorners.swift */; };
+		1683B0572C666DE00083C850 /* PriceAndBuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0562C666DE00083C850 /* PriceAndBuyView.swift */; };
+		1683B0592C666DF40083C850 /* ProductNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0582C666DF40083C850 /* ProductNameView.swift */; };
+		1683B05B2C666E560083C850 /* DiscountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B05A2C666E560083C850 /* DiscountView.swift */; };
+		1683B05D2C666E7E0083C850 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B05C2C666E7E0083C850 /* RatingView.swift */; };
+		1683B05F2C666EA10083C850 /* ActionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B05E2C666EA10083C850 /* ActionPanel.swift */; };
+		1683B0612C666EC40083C850 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0602C666EC40083C850 /* Badge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +47,12 @@
 		1683B04E2C66415F0083C850 /* WeightOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightOperator.swift; sourceTree = "<group>"; };
 		1683B0502C66476A0083C850 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1683B0532C664ED10083C850 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		1683B0562C666DE00083C850 /* PriceAndBuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAndBuyView.swift; sourceTree = "<group>"; };
+		1683B0582C666DF40083C850 /* ProductNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNameView.swift; sourceTree = "<group>"; };
+		1683B05A2C666E560083C850 /* DiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountView.swift; sourceTree = "<group>"; };
+		1683B05C2C666E7E0083C850 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		1683B05E2C666EA10083C850 /* ActionPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPanel.swift; sourceTree = "<group>"; };
+		1683B0602C666EC40083C850 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,7 @@
 		1683B03F2C662E390083C850 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1683B0552C666A8E0083C850 /* MarketCellSubviews */,
 				1683B0432C66379A0083C850 /* ProductGridCell.swift */,
 			);
 			path = Views;
@@ -154,6 +167,19 @@
 				1683B0532C664ED10083C850 /* RoundedCorners.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		1683B0552C666A8E0083C850 /* MarketCellSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				1683B0562C666DE00083C850 /* PriceAndBuyView.swift */,
+				1683B0582C666DF40083C850 /* ProductNameView.swift */,
+				1683B05A2C666E560083C850 /* DiscountView.swift */,
+				1683B05C2C666E7E0083C850 /* RatingView.swift */,
+				1683B05E2C666EA10083C850 /* ActionPanel.swift */,
+				1683B0602C666EC40083C850 /* Badge.swift */,
+			);
+			path = MarketCellSubviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1683B05F2C666EA10083C850 /* ActionPanel.swift in Sources */,
 				1683B0442C66379A0083C850 /* ProductGridCell.swift in Sources */,
+				1683B05B2C666E560083C850 /* DiscountView.swift in Sources */,
 				1683B0512C66476A0083C850 /* Colors.swift in Sources */,
 				1683B02B2C6511280083C850 /* MarketScreen.swift in Sources */,
 				1683B03C2C6627A10083C850 /* NavigationBarAppearance.swift in Sources */,
@@ -235,10 +263,14 @@
 				1683B04B2C663B4D0083C850 /* MarketCellViewModel.swift in Sources */,
 				1683B04D2C663BC30083C850 /* Product.swift in Sources */,
 				1683B03E2C6628340083C850 /* Color + extensions.swift in Sources */,
+				1683B0572C666DE00083C850 /* PriceAndBuyView.swift in Sources */,
+				1683B05D2C666E7E0083C850 /* RatingView.swift in Sources */,
 				1683B0542C664ED10083C850 /* RoundedCorners.swift in Sources */,
 				1683B03A2C66258D0083C850 /* Images.swift in Sources */,
 				1683B0292C6511280083C850 /* SparInternTaskApp.swift in Sources */,
 				1683B0472C6639050083C850 /* BadgeType.swift in Sources */,
+				1683B0592C666DF40083C850 /* ProductNameView.swift in Sources */,
+				1683B0612C666EC40083C850 /* Badge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

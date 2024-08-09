@@ -16,19 +16,37 @@ struct ProductGridCell: View {
                     Badge(badge: viewModel.product.badge)
                 }
                 .overlay(alignment: .topTrailing) {
-                    VStack(spacing: 0) {
-                        Image(uiImage: Images.orderList)
-                        Image(uiImage: Images.favorites)
-                    }
-                    .background(.white.opacity(0.9))
-                    .roundedCorners(0, 16, 0, 0)
+                    actionPanel(onListTap: {}, onFavouriteTap: {})
                 }
         }
         .roundedCorners(16, 20, 20, 16)
     }
 }
 
-struct Badge: View {
+fileprivate struct actionPanel: View {
+    let onListTap: () -> Void
+    let onFavouriteTap: () -> Void
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            Button {
+                onListTap()
+            } label: {
+                Image(uiImage: Images.orderList)
+            }
+            
+            Button {
+                onListTap()
+            } label: {
+                Image(uiImage: Images.favorites)
+            }
+        }
+        .background(.white.opacity(0.9))
+        .roundedCorners(0, 16, 0, 0)
+    }
+}
+
+fileprivate struct Badge: View {
     let badge: BadgeType?
     let color: Color
     

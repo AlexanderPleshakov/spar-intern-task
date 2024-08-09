@@ -25,4 +25,5 @@ enum Colors {
     static let darkRed = Color(hex: "#C32323")
     
     static let shadowDark = Color(hex: "#8B8B8B").opacity(0.2)
+    static let separatorGray = Color(hex: "#D7D7D7")
 }

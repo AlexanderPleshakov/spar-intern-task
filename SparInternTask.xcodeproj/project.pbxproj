@@ -34,6 +34,7 @@
 		1683B06A2C6687740083C850 /* PriceAndBuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0692C6687740083C850 /* PriceAndBuyViewModel.swift */; };
 		1683B06C2C669BF80083C850 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B06B2C669BF80083C850 /* CounterView.swift */; };
 		1683B06E2C66A5160083C850 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B06D2C66A5160083C850 /* Mocks.swift */; };
+		1683B0702C66B58C0083C850 /* ProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B06F2C66B58C0083C850 /* ProductListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		1683B0692C6687740083C850 /* PriceAndBuyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceAndBuyViewModel.swift; sourceTree = "<group>"; };
 		1683B06B2C669BF80083C850 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		1683B06D2C66A5160083C850 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		1683B06F2C66B58C0083C850 /* ProductListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				1683B0552C666A8E0083C850 /* MarketCellSubviews */,
 				1683B0432C66379A0083C850 /* ProductGridCell.swift */,
+				1683B06F2C66B58C0083C850 /* ProductListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				1683B0632C666FDA0083C850 /* CountryView.swift in Sources */,
 				1683B06E2C66A5160083C850 /* Mocks.swift in Sources */,
 				1683B0292C6511280083C850 /* SparInternTaskApp.swift in Sources */,
+				1683B0702C66B58C0083C850 /* ProductListCell.swift in Sources */,
 				1683B0472C6639050083C850 /* BadgeType.swift in Sources */,
 				1683B0592C666DF40083C850 /* ProductNameView.swift in Sources */,
 				1683B0612C666EC40083C850 /* Badge.swift in Sources */,

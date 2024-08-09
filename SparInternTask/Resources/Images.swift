@@ -14,6 +14,7 @@ enum Images {
     // Market
     static let addCart = UIImage(named: "AddCart") ?? UIImage()
     static let favorites = UIImage(named: "Favorites") ?? UIImage()
+    static let favoritesActive = UIImage(named: "Favorite-active") ?? UIImage()
     static let minus = UIImage(named: "Minus") ?? UIImage()
     static let orderList = UIImage(named: "OrderList") ?? UIImage()
     static let perAmount = UIImage(named: "PerAmount") ?? UIImage()

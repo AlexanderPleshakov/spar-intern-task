@@ -11,6 +11,8 @@ struct ActionPanel: View {
     let onListTap: () -> Void
     let onFavouriteTap: () -> Void
     
+    @State var isFavorite = false
+    
     var body: some View {
         VStack(spacing: 0) {
             Button {
@@ -20,9 +22,12 @@ struct ActionPanel: View {
             }
             
             Button {
-                onListTap()
+                onFavouriteTap()
+                isFavorite.toggle()
             } label: {
-                Image(uiImage: Images.favorites)
+                Image(
+                    uiImage: isFavorite ? Images.favoritesActive : Images.favorites
+                )
             }
         }
         .background(.white.opacity(0.9))

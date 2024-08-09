@@ -16,7 +16,7 @@ struct MarketScreen: View {
     
     @ObservedObject var viewModel: MarketViewModel
     
-    init(viewModel: MarketViewModel, isGridLayout: Bool = true) {
+    init(viewModel: MarketViewModel) {
         self.viewModel = viewModel
         NavigationBarAppearance.setCustomAppearance()
     }

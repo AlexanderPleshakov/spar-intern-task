@@ -14,6 +14,7 @@
 		1683B03A2C66258D0083C850 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0392C66258D0083C850 /* Images.swift */; };
 		1683B03C2C6627A10083C850 /* NavigationBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B03B2C6627A10083C850 /* NavigationBarAppearance.swift */; };
 		1683B03E2C6628340083C850 /* Color + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B03D2C6628340083C850 /* Color + extensions.swift */; };
+		1683B0422C662E550083C850 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0412C662E550083C850 /* MarketViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		1683B0392C66258D0083C850 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		1683B03B2C6627A10083C850 /* NavigationBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarAppearance.swift; sourceTree = "<group>"; };
 		1683B03D2C6628340083C850 /* Color + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + extensions.swift"; sourceTree = "<group>"; };
+		1683B0412C662E550083C850 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,8 @@
 		1683B0362C661F460083C850 /* Market */ = {
 			isa = PBXGroup;
 			children = (
+				1683B0402C662E3F0083C850 /* ViewModels */,
+				1683B03F2C662E390083C850 /* Views */,
 				1683B02A2C6511280083C850 /* MarketScreen.swift */,
 			);
 			path = Market;
@@ -98,6 +102,21 @@
 				1683B0392C66258D0083C850 /* Images.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1683B03F2C662E390083C850 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1683B0402C662E3F0083C850 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1683B0412C662E550083C850 /* MarketViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +191,7 @@
 			files = (
 				1683B02B2C6511280083C850 /* MarketScreen.swift in Sources */,
 				1683B03C2C6627A10083C850 /* NavigationBarAppearance.swift in Sources */,
+				1683B0422C662E550083C850 /* MarketViewModel.swift in Sources */,
 				1683B03E2C6628340083C850 /* Color + extensions.swift in Sources */,
 				1683B03A2C66258D0083C850 /* Images.swift in Sources */,
 				1683B0292C6511280083C850 /* SparInternTaskApp.swift in Sources */,

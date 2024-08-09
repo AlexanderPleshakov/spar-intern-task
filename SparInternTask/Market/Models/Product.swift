@@ -15,5 +15,5 @@ struct Product {
     let discountPrice: Double?
     let discount: Int?
     let byWeight: Bool
-    let badge: String?
+    let badge: BadgeType?
 }

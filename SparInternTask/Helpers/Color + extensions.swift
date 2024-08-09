@@ -60,6 +60,4 @@ extension UIColor {
 
         return nil
     }
-    
-    static let dividerGray = UIColor(hex: "#CBCBCB")
 }

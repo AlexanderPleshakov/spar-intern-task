@@ -9,6 +9,7 @@ import Foundation
 
 final class MarketCellViewModel: ObservableObject {
     let product: Product
+    lazy var unitPickerViewModel = UnitPickerViewModel()
     
     @Published var selectedPrice: Double?
     @Published var selectedWeight: Double?

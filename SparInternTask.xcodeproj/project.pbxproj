@@ -28,6 +28,9 @@
 		1683B05D2C666E7E0083C850 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B05C2C666E7E0083C850 /* RatingView.swift */; };
 		1683B05F2C666EA10083C850 /* ActionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B05E2C666EA10083C850 /* ActionPanel.swift */; };
 		1683B0612C666EC40083C850 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0602C666EC40083C850 /* Badge.swift */; };
+		1683B0632C666FDA0083C850 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0622C666FDA0083C850 /* CountryView.swift */; };
+		1683B0652C667EBB0083C850 /* UnitPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0642C667EBA0083C850 /* UnitPicker.swift */; };
+		1683B0682C667FB40083C850 /* UnitPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1683B0672C667FB40083C850 /* UnitPickerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		1683B05C2C666E7E0083C850 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		1683B05E2C666EA10083C850 /* ActionPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPanel.swift; sourceTree = "<group>"; };
 		1683B0602C666EC40083C850 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		1683B0622C666FDA0083C850 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
+		1683B0642C667EBA0083C850 /* UnitPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitPicker.swift; sourceTree = "<group>"; };
+		1683B0672C667FB40083C850 /* UnitPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitPickerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 			children = (
 				1683B0412C662E550083C850 /* MarketViewModel.swift */,
 				1683B04A2C663B4D0083C850 /* MarketCellViewModel.swift */,
+				1683B0672C667FB40083C850 /* UnitPickerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -178,6 +185,8 @@
 				1683B05C2C666E7E0083C850 /* RatingView.swift */,
 				1683B05E2C666EA10083C850 /* ActionPanel.swift */,
 				1683B0602C666EC40083C850 /* Badge.swift */,
+				1683B0622C666FDA0083C850 /* CountryView.swift */,
+				1683B0642C667EBA0083C850 /* UnitPicker.swift */,
 			);
 			path = MarketCellSubviews;
 			sourceTree = "<group>";
@@ -266,7 +275,10 @@
 				1683B0572C666DE00083C850 /* PriceAndBuyView.swift in Sources */,
 				1683B05D2C666E7E0083C850 /* RatingView.swift in Sources */,
 				1683B0542C664ED10083C850 /* RoundedCorners.swift in Sources */,
+				1683B0682C667FB40083C850 /* UnitPickerViewModel.swift in Sources */,
+				1683B0652C667EBB0083C850 /* UnitPicker.swift in Sources */,
 				1683B03A2C66258D0083C850 /* Images.swift in Sources */,
+				1683B0632C666FDA0083C850 /* CountryView.swift in Sources */,
 				1683B0292C6511280083C850 /* SparInternTaskApp.swift in Sources */,
 				1683B0472C6639050083C850 /* BadgeType.swift in Sources */,
 				1683B0592C666DF40083C850 /* ProductNameView.swift in Sources */,

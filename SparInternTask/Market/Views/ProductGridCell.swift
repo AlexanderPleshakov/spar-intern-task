@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ProductGridCell: View {
     let viewModel: MarketCellViewModel
+    
     var body: some View {
         VStack {
-            Image("p1", bundle: nil)
+            Image(viewModel.product.image, bundle: nil)
                 .overlay(alignment: .topLeading) {
                     Badge(badge: viewModel.product.badge)
                 }
@@ -25,16 +26,20 @@ struct ProductGridCell: View {
                     DiscountView(text: "25%")
                 }
             
-            ProductNameView(name: viewModel.product.title)
-                .padding(.all, 8)
+            VStack(alignment: .leading, spacing: 4) {
+                ProductNameView(name: viewModel.product.title)
+                CountryView(country: viewModel.product.country)
+            }
+            .padding([.top, .horizontal], 8)
             
             Spacer()
+            UnitPicker(viewModel: viewModel.unitPickerViewModel)
             
             PriceAndBuyView(discountPrice: "367.90", price: "199,0") {
                 
             }
         }
-        .frame(width: 168, height: 278)
+        .frame(width: 168, height: 300)
         .background(.white)
         .roundedCorners(16, 20, 20, 16)
         .shadow(color: Colors.shadowDark, radius: 8)
@@ -47,12 +52,14 @@ struct ProductGridCell: View {
             product: Product(
                 id: UUID(),
                 title: "Дорадо Охлажденная Непотрошеная 300-400г",
+                image: "p1",
                 rating: "4.1",
                 price: "199.0",
                 discountPrice: "99.90",
                 discount: "12 %",
                 byWeight: false,
-                badge: BadgeType.new
+                badge: BadgeType.new,
+                country: "Франция 🇫🇷"
             )
         )
     )

@@ -11,7 +11,7 @@ import SwiftUI
 struct SparInternTaskApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MarketScreen()
         }
     }
 }

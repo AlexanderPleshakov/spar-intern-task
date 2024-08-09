@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MarketScreen.swift
 //  SparInternTask
 //
 //  Created by Александр Плешаков on 08.08.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MarketScreen: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,6 +19,6 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    MarketScreen()
+//}

@@ -15,15 +15,16 @@ struct ProductGridCell: View {
                 .overlay(alignment: .topLeading) {
                     Badge(badge: viewModel.product.badge)
                 }
+                .overlay(alignment: .topTrailing) {
+                    VStack(spacing: 0) {
+                        Image(uiImage: Images.orderList)
+                        Image(uiImage: Images.favorites)
+                    }
+                    .background(.white.opacity(0.9))
+                    .roundedCorners(0, 16, 0, 0)
+                }
         }
-        .clipShape(
-            .rect(
-                topLeadingRadius: 16,
-                bottomLeadingRadius: 20,
-                bottomTrailingRadius: 20,
-                topTrailingRadius: 16
-            )
-        )
+        .roundedCorners(16, 20, 20, 16)
     }
 }
 
@@ -44,6 +45,7 @@ struct Badge: View {
             self.color = .clear
         }
     }
+    
     var body: some View {
         if let badge {
             Text(badge.rawValue)
@@ -54,14 +56,7 @@ struct Badge: View {
                 .font(.system(size: 10))
                 .foregroundStyle(.white)
                 .background(color)
-                .clipShape(
-                    .rect(
-                        topLeadingRadius: 0,
-                        bottomLeadingRadius: 0,
-                        bottomTrailingRadius: 6,
-                        topTrailingRadius: 6
-                    )
-                )
+                .roundedCorners(0, 0, 6, 6)
         }
         
     }

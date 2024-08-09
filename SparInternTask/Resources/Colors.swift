@@ -17,4 +17,8 @@ enum Colors {
     static let textIconsBlack01 = Color(hex: "#262626")
     static let textIconsBlack02 = Self.textIconsBlack01.opacity(0.8)
     static let textIconsBlack03 = Self.textIconsBlack01.opacity(0.6)
+    
+    static let darkRed = Color(hex: "#C32323")
+    
+    static let shadowDark = Color(hex: "#8B8B8B").opacity(0.2)
 }

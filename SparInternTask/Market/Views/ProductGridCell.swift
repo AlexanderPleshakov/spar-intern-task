@@ -21,8 +21,15 @@ struct ProductGridCell: View {
                 .overlay(alignment: .bottomLeading) {
                     Rating(rating: "5.0")
                 }
+                .overlay(alignment: .bottomTrailing) {
+                    Text("25%")
+                        .padding(.horizontal, 5)
+                        .font(.system(size: 16, weight: .bold))
+                        .foregroundStyle(Colors.darkRed)
+                }
         }
         .roundedCorners(16, 20, 20, 16)
+        .shadow(color: Colors.shadowDark, radius: 8)
     }
 }
 
@@ -108,7 +115,7 @@ fileprivate struct Badge: View {
                 rating: "4.1",
                 price: "199.0",
                 discountPrice: "99.90",
-                discount: "12",
+                discount: "12 %",
                 byWeight: false,
                 badge: BadgeType.new
             )

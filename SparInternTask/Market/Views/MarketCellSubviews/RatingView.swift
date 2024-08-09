@@ -16,7 +16,7 @@ struct RatingView: View {
             Text(rating)
                 .font(.system(size: 12))
                 .padding(.vertical, 1)
-                .foregroundStyle(Colors.textStatic)
+                .foregroundStyle(Colors.textStaticBlack)
         }
         .padding(.vertical, 2)
         .padding(.leading, 4)

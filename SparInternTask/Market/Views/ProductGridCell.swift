@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductGridCell: View {
-    let viewModel: MarketCellViewModel
+    @ObservedObject var viewModel: MarketCellViewModel
     
     var body: some View {
         VStack {
@@ -34,9 +34,18 @@ struct ProductGridCell: View {
             
             Spacer()
             
-            UnitPicker(viewModel: viewModel.unitPickerViewModel)
-            
-            PriceAndBuyView(viewModel: viewModel.priceAndBuyViewModel)
+            if viewModel.bought {
+                UnitPicker(viewModel: viewModel.unitPickerViewModel)
+                
+                CounterView(
+                    minusAction: viewModel.minusCount,
+                    plusAction: viewModel.addCount,
+                    count: viewModel.unitsCount,
+                    totalPrice: viewModel.totalPrice
+                )
+            } else {
+                PriceAndBuyView(viewModel: viewModel.priceAndBuyViewModel)
+            }
         }
         .frame(width: 168, height: 300)
         .background(.white)

@@ -12,7 +12,7 @@ enum PriceAndBuyViewType {
 }
 
 final class PriceAndBuyViewModel: ObservableObject {
-    let action: () -> Void
+    var action:  (() -> Void)?
     private let discountPrice: String?
     let price: String
     
@@ -31,10 +31,13 @@ final class PriceAndBuyViewModel: ObservableObject {
         
     }
     
-    init(discountPrice: String?, price: String, action: @escaping () -> Void) {
+    init(discountPrice: String?, price: String) {
         self.price = price
-        self.action = action
         self.discountPrice = discountPrice
+    }
+    
+    func buy() {
+        (action ?? {})()
     }
     
     private func getDetailPrice(from price: String?) -> (String, String)? {

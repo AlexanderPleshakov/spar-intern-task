@@ -31,7 +31,9 @@ struct PriceAndBuyView: View {
             Spacer()
             
             Button {
-                viewModel.action()
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    viewModel.buy()
+                }
             } label: {
                 Image(uiImage: Images.addCart)
             }

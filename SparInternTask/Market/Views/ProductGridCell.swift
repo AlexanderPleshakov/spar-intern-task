@@ -16,14 +16,33 @@ struct ProductGridCell: View {
                     Badge(badge: viewModel.product.badge)
                 }
                 .overlay(alignment: .topTrailing) {
-                    actionPanel(onListTap: {}, onFavouriteTap: {})
+                    ActionPanel(onListTap: {}, onFavouriteTap: {})
+                }
+                .overlay(alignment: .bottomLeading) {
+                    Rating(rating: "5.0")
                 }
         }
         .roundedCorners(16, 20, 20, 16)
     }
 }
 
-fileprivate struct actionPanel: View {
+fileprivate struct Rating: View {
+    let rating: String
+    
+    var body: some View {
+        HStack(spacing: 2) {
+            Image(uiImage: Images.star)
+            Text(rating)
+                .font(.system(size: 12))
+                .padding(.vertical, 1)
+                .foregroundStyle(Colors.textStatic)
+        }
+        .padding(.vertical, 2)
+        .padding(.leading, 4)
+    }
+}
+
+fileprivate struct ActionPanel: View {
     let onListTap: () -> Void
     let onFavouriteTap: () -> Void
     
@@ -86,10 +105,10 @@ fileprivate struct Badge: View {
             product: Product(
                 id: UUID(),
                 title: "Сыр Ламбер 500/0 230г",
-                rating: 4.1,
-                price: 199.0,
-                discountPrice: 99.90,
-                discount: nil,
+                rating: "4.1",
+                price: "199.0",
+                discountPrice: "99.90",
+                discount: "12",
                 byWeight: false,
                 badge: BadgeType.new
             )

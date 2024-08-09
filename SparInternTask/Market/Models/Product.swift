@@ -10,10 +10,10 @@ import Foundation
 struct Product {
     let id: UUID
     let title: String
-    let rating: Double
-    let price: Double
-    let discountPrice: Double?
-    let discount: Int?
+    let rating: String
+    let price: String
+    let discountPrice: String?
+    let discount: String?
     let byWeight: Bool
     let badge: BadgeType?
 }

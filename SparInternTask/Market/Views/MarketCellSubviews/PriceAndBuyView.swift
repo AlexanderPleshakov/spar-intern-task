@@ -8,30 +8,30 @@
 import SwiftUI
 
 struct PriceAndBuyView: View {
-    let discountPrice: String
-    let price: String
-    let action: () -> Void
+    @ObservedObject var viewModel: PriceAndBuyViewModel
     
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 0) {
                 HStack(alignment: .top, spacing: 2) {
-                    Text("1298")
+                    Text(viewModel.detailPrice?.0 ?? "")
                         .font(.system(size: 20, weight: .bold))
-                    Text("90")
+                    Text(viewModel.detailPrice?.1 ?? "")
                         .font(.system(size: 16, weight: .bold))
                     Image(uiImage: Images.perAmount)
                         .padding(.vertical, 1)
                 }
-                Text("190,0")
-                    .font(.system(size: 12))
-                    .foregroundStyle(Colors.textIconsBlack03)
-                    .strikethrough(true, color: Colors.textIconsBlack03)
+                if viewModel.type == .withDiscount {
+                    Text(viewModel.price)
+                        .font(.system(size: 12))
+                        .foregroundStyle(Colors.textIconsBlack03)
+                        .strikethrough(true, color: Colors.textIconsBlack03)
+                }
             }
             Spacer()
             
             Button {
-                action()
+                viewModel.action()
             } label: {
                 Image(uiImage: Images.addCart)
             }

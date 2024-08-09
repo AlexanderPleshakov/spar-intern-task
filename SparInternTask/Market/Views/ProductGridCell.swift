@@ -33,11 +33,10 @@ struct ProductGridCell: View {
             .padding([.top, .horizontal], 8)
             
             Spacer()
+            
             UnitPicker(viewModel: viewModel.unitPickerViewModel)
             
-            PriceAndBuyView(discountPrice: "367.90", price: "199,0") {
-                
-            }
+            PriceAndBuyView(viewModel: viewModel.priceAndBuyViewModel)
         }
         .frame(width: 168, height: 300)
         .background(.white)

@@ -26,7 +26,24 @@ struct MarketScreen: View {
             Group {
                 switch viewModel.layoutState {
                 case .grid:
-                    LazyVGrid(columns: columns, spacing: 8) {}
+                    LazyVGrid(columns: columns, spacing: 8) {
+                        ProductGridCell(
+                            viewModel: MarketCellViewModel(
+                                product: Product(
+                                    id: UUID(),
+                                    title: "Дорадо Охлажденная Непотрошеная 300-400г",
+                                    image: "p3",
+                                    rating: "4.1",
+                                    price: "199.0",
+                                    discountPrice: "99.90",
+                                    discount: "12 %",
+                                    byWeight: false,
+                                    badge: BadgeType.new,
+                                    country: "Франция 🇫🇷"
+                                )
+                            )
+                        )
+                    }
                 case .list:
                     List {}
                 }

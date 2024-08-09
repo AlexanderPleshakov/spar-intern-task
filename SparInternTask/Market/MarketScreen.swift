@@ -38,6 +38,7 @@ struct MarketScreen: View {
                         }
                         .padding(.horizontal, 16)
                         .padding(.top, 9)
+                        .padding(.bottom, 30)
                     }
                 case .list:
                     List {}
@@ -45,6 +46,7 @@ struct MarketScreen: View {
                 
                 Spacer()
             }
+            .ignoresSafeArea(.container, edges: .bottom)
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     LayoutButton(onTap: viewModel.changeState, layout: viewModel.layoutState)

@@ -49,6 +49,5 @@ https://www.figma.com/design/1VrYJ62cSC7yFJWsuUD3xa/Spar-Intern-Task?node-id=0-1
 В Mocks я создаю массив с моковыми продуктами.
 
 ###### Результат работы
-
-![](https://github.com/AlexanderPleshakov/spar-intern-task/blob/feature/cleaning-and-readme/ReadmeAssets/result.gif)
+![Result](./ReadmeAssets/result.gif "Result")
 
